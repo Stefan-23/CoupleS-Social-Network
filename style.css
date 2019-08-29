@@ -1,0 +1,191 @@
+body{
+	margin:0px;
+	padding:0px;
+	background-image: url("pictures/lovers.jpg");
+	background-position:top;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	
+}
+@font-face{
+	font-family:'Brush Script MT';src:url('fonts/BRUSHSCI.ttf')
+}
+#nav{
+	padding:0px;
+	height:58px;
+	margin-bottom:30px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 25px;
+  font-family:Brush Script MT, sans-serif;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color:purple;
+
+}
+
+li a:hover {
+  transition: 2s;
+  background-color: #FF69B4;
+  
+}
+#logo{
+	padding:0px;
+	margin-bottom:10px;
+	height:75px;
+	margin-left:330px;
+}
+#main{
+	border-radius:25px;
+	border:2px solid;
+	border-color:#FF69B4;
+	padding: 20px;
+	width:400px;
+	height:500px;
+	font-size:20px;
+	background-image:url("pictures/Love.jpg");
+	background-position:center;
+	background-repeat:no-repeat;
+	color:#000000;
+	margin-left: 700px;
+	clear:both;
+	font-family: Brush Script MT, sans-serif;
+}
+#main2{
+	border-radius:25px;
+	border:2px solid;
+	border-color:#FF69B4;
+	padding: 20px;
+	width:400px;
+	font-size:20px;
+	background-image:url("pictures/Love.jpg");
+	background-position:center;
+	background-repeat:no-repeat;
+	background-color:#FFF8DC;
+	margin:auto;
+	clear:both;
+	font-family:Brush Script MT, sans-serif;
+}
+#body1{
+	margin:0px;
+	padding:0px;
+	background-image: url("pictures/couples-main.jpg");
+	background-position:center;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #FFF0F5;
+}
+#main3{
+	border-radius:25px;
+	border:2px solid;
+	border-color:#FF69B4;
+	padding: 20px;
+	width:400px;
+	font-size:25px;
+	background-image:url("pictures/hearts.jpg");
+	background-position:center;
+	background-repeat:no-repeat;
+	background-color:#FFF8DC;
+	margin:auto;
+	clear:both;
+	color:FFFFFF;
+	font-family:Brush Script MT, sans-serif;
+}
+button{
+  background-color: #778899;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+button:hover{
+	transition:2s;
+	background-color:#FF69B4;
+}
+
+#login{
+	border-radius:25px;
+	border:2px solid;
+	border-color:#FF69B4;
+	padding: 20px;
+	width:400px;
+	font-size:25px;
+	background-image:url("pictures/login.jpg");
+	background-position:center;
+	background-repeat:no-repeat;
+	background-color:#FFF8DC;
+	margin:auto;
+	clear:both;
+	color:FFFFFF;
+	font-family:Brush Script MT, sans-serif;
+}
+#footer{
+	width:50%;
+	
+}
+#home1{
+    margin:0px;
+	padding:0px;
+	background-image: url("pictures/love2.jpg");
+	background-position:top;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+}
+#homepage{
+	margin:auto;
+	width:1000px;
+	background-color: #FFFFFF;
+	border-radius:25px;
+    border:2px solid;
+	border-color: #FF69B4;
+    padding:5px;
+}
+#posts{
+	height:200px;
+	width:100%;
+	color:#778899;
+	margin:auto;
+	border-radius:25px;
+}
+#iconc{
+	height:50px;
+	width:50px;
+}
+#file{
+	width:0px;
+	height:0px;
+}
+
+
+
+
+
+
+
+
+
+
