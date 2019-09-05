@@ -1,0 +1,57 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8"> 
+    <title> Couples </title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div> 
+    <div id="nav"> 
+    <ul>
+        <li><a class="transition" href="index.html"> HOME </a></li>
+        <li><a class="transition" href="about.html">ABOUT</a></li>
+        <img src="pictures/logo.png" alt="logo" id="logo">
+        <li style="float:right"><a class="active" href="signup.html">SIGN UP</a></li>
+		<li style="float:right"><a class="active" href="login.html">LOG IN</a></li>
+    </ul>
+</div>
+
+<div id="main3">
+
+<h1> SIGN UP </h1>
+        <div class="container">
+        <form action="inc/signin.php" method="POST">
+        
+            <label for="uname"><b> Username: </b></label>
+            <input type="text" placeholder="Enter Username" name="uname">
+                    <br>
+            <label for="password"><b> Password: </b></label>
+            <input type="password" placeholder="Enter Password" name="password" >
+			        <br>
+			<label for="password"><b> Repeat password: </b></label>
+            <input type="password" placeholder="Enter Password" name="password-repeat" >
+			        <br>
+			<label for="fname"> <b> First name: </b></label>
+			<input type="text" placeholder="Your first name" name="fname">
+			        <br>
+			<label for="lname"> <b> Partner name: </b> </label>
+			<input type="text" placeholder="Your partner name" name="lname">
+			        <br>
+			<label for="email"> <b> E-mail: </b> </label>
+			<input type="text" placeholder="E-mail" name="email">
+			        <br>
+			<label for="country"> <b> Country: </b> </label>
+			<input type="text" placeholder="Where are you from?" name="country">
+                    <br> <br>
+            <button type="submit" name="insert" value="insert" >SIGN IN</button>      
+        </form>
+		</div>
+<div id="footer">
+<div>
+
+
+
+</div>
+</div>
+</body>
+</html>
