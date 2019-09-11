@@ -7,8 +7,9 @@ session_start();
 <head>
     <meta charset="UTF-8">
 	<title> CoupleS </title>
-	<link href="style.css" type="text/css" rel="stylesheet">
 	<link href="bootstrap.css" type="text/css" rel="stylesheet">
+	<link href="style.css" type="text/css" rel="stylesheet">
+	
 </head>
 
 <body id="home1">
@@ -62,54 +63,18 @@ session_start();
 					<hr>
 			
 			</form>
-		</div> <br> <br> <br> <br>
+		</div> <br> <br> <br> <br> <br>
 		
 		<h3 style="text-align:center; padding:2px; font-family:Brush Script MT, sans-serif;"> News feed </h3>
 <?php
+        include "inc/functions.php";
+		
+		showComments($conn);
         
-        if(isset($_POST['input'])){
-			$username= $_SESSION['user_username'];
-			$comment = $_POST['text'];
-			
-			
-			$sql="INSERT INTO posts (post_by,post_caption) VALUE ('{$username}','{$comment}') ";
-	        $query = mysqli_query($conn,$sql);
-	    if(!$query){
-		    echo mysqli_error($conn);
-		}     
-		}
-	    $sql1= "SELECT*FROM posts";
-        $find_comments=mysqli_query($conn,$sql1);
 		
-		while($row=mysqli_fetch_assoc($find_comments)){
-			$username=$_SESSION['user_username'];
-			$post= $row['post_caption'];
-			
-			echo $username . ":". "<br>" . $post . "<br>" . "<hr>";?>
-			<form method="POST" action="#">
-                <textarea name="txt-rpl"> </textarea> <br>
-				<input type="submit" name="reply" value="Reply">
-			</form><?php
-		}
-		if(isset($_POST['reply'])){
-	    if(!empty($_POST['reply'])){
-		    $user= $_SESSION["user_username"];
-			$reply=trim($_POST["txt-rpl"]);
-			
-		$query1="INSERT INTO posts (post_by,reply) VALUE ('{$user}','{$reply}') ";
-			$repyls= mysqli_query($conn,$query1);
-			if(!$repyls){
-				echo mysqli_error($conn);
-			}
-	    }
-		/*$sql="SELECT*FROM posts WHERE reply=1";
-		$result = mysqli_query($conn,$sql);
-		while($row=mysqli_fetch_assoc($result)){
-			echo $row["reply"];
-		}*/
-		
-	}
-?>
+		?>
+
+	
 </div>
 </body>
 

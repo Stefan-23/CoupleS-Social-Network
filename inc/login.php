@@ -26,10 +26,10 @@
                         exit();
 		            }elseif($pwdCheck == TRUE){
                         session_start();
-                        $_SESSION['userId'] = $row["user_id"];
-                        $_SESSION['user_username'] = $row["username"];
+                        $_SESSION["userId"] = $row["user_id"];
+                        $_SESSION["user_username"] = $row["username"];
 
- 						header("Location: ../login.html?login=succes!");
+ 						header("Location: ../homepage.php?login=succes!");
                         exit();
 		        }else{
 			   header("Location: ../login.html?error=passwordnotmatch");

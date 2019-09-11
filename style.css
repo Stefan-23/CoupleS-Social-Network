@@ -163,6 +163,7 @@ button:hover{
     border:2px solid;
 	border-color: #FF69B4;
     padding:5px;
+	
 }
 #posts{
 	height:200px;
@@ -170,6 +171,7 @@ button:hover{
 	color:#778899;
 	margin:auto;
 	border-radius:25px;
+	position:relative;
 }
 #iconc{
 	height:50px;
@@ -178,6 +180,32 @@ button:hover{
 #file{
 	width:0px;
 	height:0px;
+}
+.edit_form {
+	
+	top: 0px;
+	right:0px;
+}
+.edit_form input[type=submit]{
+	font-size: 75%;
+	color: black;
+	border:none;
+    cursor: pointer;
+	float:left;
+	
+}
+.delete_form {
+	
+	top: 0px;
+	right:0px;
+}
+.delete_form input[type=submit]{
+	font-size: 75%;
+	color: black;
+	border:none;
+    cursor: pointer;
+	float:left;
+
 }
 
 
