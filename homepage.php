@@ -1,81 +1,66 @@
 <?php
+ob_start();
 require "inc/db_connect.php";
+include "inc/functions.php";
 session_start();
 
+include "inc/hf/header.php" ;
 ?>
-<html>
-<head>
-    <meta charset="UTF-8">
-	<title> CoupleS </title>
-	<link href="bootstrap.css" type="text/css" rel="stylesheet">
-	<link href="style.css" type="text/css" rel="stylesheet">
-	
-</head>
+
 
 <body id="home1">
-    
-	
-	 <div> 
     <div id="nav"> 
-    <ul>
+        <ul>
 	
-        <li><a class="transition" href="homepage.php"> HOME </a></li>
-        <li><a class="transition" href="about.html">ABOUT</a></li>
+            <li class="dropdown">
+		        <button class="dropbtn">News</button>
+                    <div class="dropdown-content">
+                        <a href="homepage.php">Comments</a>
+                        <a href="news/picturespage.php">Pictures</a>         
+                    </div>
+		    </li>
         
-		<img src="pictures/logo.png" alt="logo" id="logo">
         
-		<li style="float:right"><a class="active" href="inc/session.php">LOG OUT</a></li>
-		<li style="float:right"><a class="active" href="#">PROFILE</a></li>
-    </ul>
+		        <img src="pictures/logo.png" alt="logo" id="logo">
+        
+		    <li style="float:right">
+		        <a class="active" href="inc/session.php">LOG OUT</a>
+		    </li>
+		    
+			<li style="float:right">
+			    <a class="active" href="profile.php"><?php echo $_SESSION["user_username"]; ?></a>
+			</li>
+        </ul>
     </div> 
 	
 	<div id="homepage">
         <div id="posts">
-		    <form method="POST" action="#" onsubmit="" type="multipart/form-data">
-                <?php 
-				    if(isset($_SESSION["userId"])){
-						$username= $_SESSION["user_username"];
-						echo "Hello" . " " .  $username;
-				    }else{
-						header("Location:login.html");
-					}
-				?>
-                <h2 style="text-align:center; padding:2px; font-family:Brush Script MT, sans-serif;"> 
-				Post something </h2>
-				
-                    <hr>
-					
+		    <form method="POST" action="#" onsubmit="" enctype="multipart/form-data">
+                <h2> 
+				Post comments
+				</h2>
+		
 		    <div class="form-group purple-border">
-                
-				<label for="exampleFormControlTextarea4">Type something...</label>
-                <textarea class="form-control" id="exampleFormControlTextarea4" rows="3" name="text"></textarea>
+                		
+                <textarea class="form-control" placeholder="Type something..."id="exampleFormControlTextarea4" rows="3" name="text"></textarea>
             
 			</div>
-			<label>
 			
-       			<img src="pictures/iconcamera.png" id="iconc">
-			    <input type="file" name="uplFile" id="file">
-				
-			</label>
-			
-			<input class="btn btn-primary" type="submit" name="input" value="Submit" style="float:right;">
+			<input class="btn btn-primary" type="submit" name="input" value="Comment" style="float:right;">
                     
-					<hr>
-			
 			</form>
-		</div> <br> <br> <br> <br> <br>
+			
+		</div> 
+		<hr>
+		<br> <br> 
 		
-		<h3 style="text-align:center; padding:2px; font-family:Brush Script MT, sans-serif;"> News feed </h3>
-<?php
-        include "inc/functions.php";
-		
-		showComments($conn);
-        
-		
-		?>
+		<h3> News feed </h3>
+
+
+<?php showComments($conn);  ?>
+
+
+ 
 
 	
-</div>
-</body>
-
-</html>
+<?php include "inc/hf/footer.php"; ?>

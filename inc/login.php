@@ -1,5 +1,5 @@
 <?php
-
+    ob_start();
 	require("db_connect.php");
 
 	if(isset($_POST["logname"])){
@@ -7,13 +7,13 @@
 	    $password = trim($_POST['logpassword']);
 
         if(empty($username) || empty($password)){
-            header("Location: ../login.html?error=emptyfields");
+            header("Location: ../login.php?error=emptyfields");
             exit();
         }else{
             $sql= "SELECT*FROM users_couples WHERE username=? OR password=?";
             $stmt=mysqli_stmt_init($conn);
             if(!mysqli_stmt_prepare($stmt,$sql)){
-                header("Location: ../login.html?error=sqlerror");
+                header("Location: ../login.php?error=sqlerror");
                 exit();
         }else{
             mysqli_stmt_bind_param($stmt, "ss", $username,$password);
@@ -22,7 +22,7 @@
 	        if($row=mysqli_fetch_assoc($result)){
 		        $pwdCheck = password_verify($password, $row["password"]);
 		            if($pwdCheck == FALSE){
-			            header("Location: ../login.html?error=wrongpassword");
+			            header("Location: ../login.php?error=wrongpassword");
                         exit();
 		            }elseif($pwdCheck == TRUE){
                         session_start();
@@ -32,11 +32,11 @@
  						header("Location: ../homepage.php?login=succes!");
                         exit();
 		        }else{
-			   header("Location: ../login.html?error=passwordnotmatch");
+			   header("Location: ../login.php?error=passwordnotmatch");
                exit();
 		    }
 	    }else{
-		    header("Location: ../login.html?error=nouser");
+		    header("Location: ../login.php?error=nouser");
             exit();
 	   }
     }
